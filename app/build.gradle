@@ -18,7 +18,7 @@ repositories {
     // Use Maven Central for resolving dependencies.
     mavenCentral()
     
-    maven { url 'https://jitpack.io' }
+    maven { g url 'https://jitpack.io' }
 }
 
 dependencies {
@@ -30,6 +30,7 @@ dependencies {
     
     // https://mvnrepository.com/artifact/org.terasoluna.gfw/terasoluna-gfw-jodatime
 	implementation 'org.terasoluna.gfw:terasoluna-gfw-jodatime:5.7.1.RELEASE'
+	
 }
 
 application {
@@ -45,7 +46,8 @@ tasks.named('test') {
 
 publishing {
     publications {
-        mavenJava(MavenPublication) {
+    gradleJava(GradlePublication){
+        //mavenJava(MavenPublication) {
             groupId = 'foo'
             artifactId = 'bar'
             version = '0.1'
