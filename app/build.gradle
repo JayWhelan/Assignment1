@@ -41,3 +41,16 @@ tasks.named('test') {
     // Use JUnit Platform for unit tests.
     useJUnitPlatform()
 }
+
+
+publishing {
+    publications {
+        mavenJava(MavenPublication) {
+            groupId = 'foo'
+            artifactId = 'bar'
+            version = '0.1'
+
+            from components.java
+        }
+    }
+}
