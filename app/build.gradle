@@ -18,7 +18,7 @@ repositories {
     // Use Maven Central for resolving dependencies.
     mavenCentral()
     
-    maven { g url 'https://jitpack.io' }
+    maven { url 'https://jitpack.io' }
 }
 
 dependencies {
@@ -43,16 +43,3 @@ tasks.named('test') {
     useJUnitPlatform()
 }
 
-
-publishing {
-    publications {
-    gradleJava(GradlePublication){
-        //mavenJava(MavenPublication) {
-            groupId = 'foo'
-            artifactId = 'bar'
-            version = '0.1'
-
-            from components.java
-        }
-    }
-}
