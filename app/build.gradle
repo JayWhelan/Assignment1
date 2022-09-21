@@ -12,6 +12,7 @@ plugins {
     
     id 'maven-publish'
 
+	id 'war'
 }
 
 repositories {
@@ -43,3 +44,14 @@ tasks.named('test') {
     useJUnitPlatform()
 }
 
+publishing {
+    publications {
+        mavenJava(MavenPublication) {
+            groupId = 'foo'
+            artifactId = 'bar'
+            version = '0.1'
+
+            from components.java
+        }
+    }
+}
