@@ -11,4 +11,6 @@ public class Lecturer {
 	private int id;
 	private String username;
 	private List<String> modulesTought = new ArrayList<>();
+	
+	
 }
