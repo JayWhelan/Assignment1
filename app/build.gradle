@@ -34,24 +34,8 @@ dependencies {
 	
 }
 
-application {
-    // Define the main class for the application.
-    mainClass = 'SoftwareA1.App'
-}
-
 tasks.named('test') {
     // Use JUnit Platform for unit tests.
     useJUnitPlatform()
 }
 
-publishing {
-    publications {
-        mavenJava(MavenPublication) {
-            groupId = 'foo'
-            artifactId = 'bar'
-            version = '0.1'
-
-            from components.java
-        }
-    }
-}

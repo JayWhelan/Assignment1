@@ -12,5 +12,9 @@ public class Lecturer {
 	private String username;
 	private List<String> modulesTought = new ArrayList<>();
 	
-	
+	public static void main (String[] args)
+	{
+		
+		System.out.println("LECTURERE WORK");
+	}
 }
