@@ -9,42 +9,62 @@ private String name;
 private int age;
 private String dob;
 private int id;
-private String username;
-private List<String> courses = new ArrayList<>();
-private List<String> modules = new ArrayList<>();
-//private String[] courses;
-//private String[] modules;
+private List<CourseProgramme> courses = new ArrayList<CourseProgramme>();
+private List<Module> modules = new ArrayList<Module>();
 
 
-
-public static void main (String[] args)
-{
-	List<String> tmp = new ArrayList<String>();
-
-	// add example
-	tmp.add("A");
-	tmp.add("B");
-	tmp.add("C");
-	Student st = new Student("Jay",14,"10/11/22",44,tmp,tmp);
-	st.getUsername();
-	
-}
-public Student(String name, int age, String dob, int id, List<String> courses, List<String> modules) {
+public Student(String name, int age, String dob, int id, List<CourseProgramme> courses, List<Module> modules) {
    this.name = name;
    this.age = age;
    this.dob = dob;
    this.id = id;
-   this.username = name+age;
    this.courses = courses;
    this.modules = modules;
-	
-	
-    System.out.println(name +" - "+ id+" - "+ courses); // Print the value of x
   }
+
+public Student(String name, int age, String dob, int id) {
+	   this.name = name;
+	   this.age = age;
+	   this.dob = dob;
+	   this.id = id;
+	  }
 
 
 public String getUsername() {
-	return this.username;
+	String username = name+age;
+	return username;
+}
+
+public String getName() {
+	return this.name;
+}
+
+public int getAge() {
+	return this.age;
+}
+
+public String getDOB() {
+	return this.dob;
+}
+
+public  List<Module> getModules(){
+	return this.modules;
+}
+
+public  List<CourseProgramme> getCourses(){
+	return this.courses;
+}
+
+public void addCourse(CourseProgramme course) {
+	if(courses == null) courses = new ArrayList<CourseProgramme>();
+	
+	courses.add(course);
+}
+
+public void addModule(Module module) {
+	if(modules == null) modules = new ArrayList<Module>();
+	
+	modules.add(module);
 }
 
 }
