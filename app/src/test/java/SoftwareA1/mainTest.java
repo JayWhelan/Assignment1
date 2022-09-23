@@ -125,8 +125,30 @@ class mainTest {
 	
 	@Test
 	void testLecturer() {
-		
-		
+		assertNotNull(testLecturer1.getUsername());
+		assertNotNull(testLecturer1.getAge());
+		assertNotNull(testLecturer1.getDOB());
+		assertNotNull(testLecturer1.getModulesTought());
+		assertNotNull(testLecturer1.getName());
+		assertNotNull(testLecturer1.getRoomID());
+	}
+	
+	@Test
+	void testModule() {
+		assertNotNull(testModule.getCourses());
+		assertNotNull(testModule.getId());
+		assertNotNull(testModule.getStudents());
+		assertNotNull(testModule.getlecturer());
+		assertNotNull(testModule.getName());
+	}
+	
+	@Test
+	void testCourses() {
+		assertNotNull(testCourse.getEndDate());
+		assertNotNull(testCourse.getStartDate());
+		assertNotNull(testCourse.getStudents());
+		assertNotNull(testCourse.getModules());
+		assertNotNull(testCourse.getName());
 	}
 
 }
